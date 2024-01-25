@@ -1,4 +1,5 @@
 import React from 'react';
+export const dynamic = 'force-dynamic';
 
 import './styles.css';
 
@@ -7,7 +8,10 @@ function RootLayout({ children }) {
     <html lang="en">
       <body>
         {children}
-        <footer>Copyright Kenneth Test</footer>
+        <footer>
+            Page rendered on{' '}
+            {new Date().toLocaleString()}
+          </footer>
       </body>
     </html>
   );
